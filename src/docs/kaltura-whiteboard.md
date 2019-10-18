@@ -56,3 +56,5 @@ Eksamen --> (B-Repo)
 Eksamen --> LMS
 @enduml
 ```
+
+![Kaltura sesjon](./images/kaltura-session.jpg)
