@@ -22,13 +22,13 @@ const Sidebar = () => (
     {process.env.GATSBY_DOCSEARCH_API_KEY && process.env.GATSBY_DOCSEARCH_INDEX && (
       <SearchBox />
     )}
-    <header>Quick start</header>
+    <header>Bruksmønster</header>
     <ul>
-      <li><Link to="/getting-started">Getting Started</Link></li>
+      <li><Link to="/lecturer">Foreleser: MAM-DLR-LMS</Link></li> 
     </ul>
-    <header>About</header>
+    <header>Komponenter</header>
     <ul>
-      <li><Link to="/about">About us</Link></li>
+      <li><Link to="/kaltura">Kaltura</Link></li>
     </ul>
   </SidebarContainer>
 )

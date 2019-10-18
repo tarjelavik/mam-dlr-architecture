@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Welcome to the docs!',
+    title: 'Lagring og LOR',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -8,6 +8,9 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-plantuml`,
+          },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           {

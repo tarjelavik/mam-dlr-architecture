@@ -19,7 +19,7 @@ const Header = () => (
       <Link
         to="/"
       >
-        Acme docs
+        Lagring og LOR
       </Link>
     </h1>
   </HeaderContainer>

@@ -9,10 +9,10 @@ import './index.css'
 const TemplateWrapper = ({ children }) => (
   <Chrome header={<Header />}>
     <Helmet
-      title="Welcome to the docs!"
+      title="Lagring og LOR"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Prosjekt ved UiB for innføring av MAM og LOR.' },
+        { name: 'keywords', content: 'MAM, LOR' },
       ]}
     />
     {children()}
