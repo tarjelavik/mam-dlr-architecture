@@ -70,5 +70,11 @@ note top of DLR
     "custom metadata" i MAM for lisenser 
     og annet DLR trenger?
 end note
+
+note left of channel
+    Ved et byttet av MAM trenger vi å
+    holde kategori-registeret. Noe for 
+    BIBSYSDEV/authority-registry?
+end note
 @enduml
 ```
