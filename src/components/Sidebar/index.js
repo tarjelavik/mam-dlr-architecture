@@ -24,7 +24,8 @@ const Sidebar = () => (
     )}
     <header>Bruksmønster</header>
     <ul>
-      <li><Link to="/lecturer">Foreleser: MAM-DLR-LMS</Link></li> 
+      <li><Link to="/lecturer">Foreleser: MAM-DLR-LMS</Link></li>
+      <li><Link to="/kaltura-whiteboard">Kaltura whiteboard sesjon</Link></li> 
     </ul>
     <header>Komponenter</header>
     <ul>
