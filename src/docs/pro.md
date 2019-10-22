@@ -1,63 +1,54 @@
 ---
-path: "/lecturer"
-title: "Foreleser: MAM-DLR-LMS"
+path: "/pro"
+title: "Vitenskapelig ansatte: MAM-DLR-LMS"
 ---
 
 ```plantuml 
 @startuml
 
-title Kaltura -> DLR: Lecturer
+title Kaltura -> DLR: Pro
+
+rectangle Goliat {
+
+}
+
+rectangle Billy {
+
+}
+
+rectangle Kaltura {
+    (Upload)
+    (Add metadata) as metadata
+    (Publish to channel) as channel
+}
 
 rectangle "Mitt UiB" as mittuib {
-    rectangle Kaltura {
-        (Upload)
-        (Express capture) 
-        (Add metadata) as metadata
-        (Publish to channel) as channel
-    }
-
     rectangle DLR {
         (Tilgangskontroll) as access
         (Lisensiering) as license
         (Embed) as embed
         (Workflow?) as wf
     }
-    rectangle Emne {
-        (Sider) as sider
-        (DLR) as ltidlr
-    }
 }
 
-:Lecturer: 
-:Student: 
+:Pro: 
 
-Lecturer --> (Upload)
-Lecturer --> (Kaltura capture)
-Lecturer --> (Express capture) 
-(Kaltura capture) --> (Upload)
+Pro --> (FCP / Premier)
+(FCP / Premier) <-> Goliat
+Goliat --> Billy
+
+Pro --> (Upload)
 (Upload) --> metadata
-(Express capture) --> metadata
 metadata --> channel : "[Resource has required\lmetadata for DLR?]"
 
 channel --> (DLR ingester) : "[Published to watched channel or category]"
 channel --> (Kunnskapskanalen CMS/SSG) : "[Published to Kunnskapskanelen channel]"
 (DLR ingester) --> wf
 (DLR ingester) ..> embed : "Kan ingester la metadata fra MAM\lstyre lisensiering og publisering?"
-embed --> ltidlr
-
-note top of ltidlr
-    MÅ bruke DLR til å
-    embedde video i Mitt UiB.
-    Det er jo poenget med DLR :-)
-end note
 
 wf --> access
 access --> license
 license --> embed
-
-ltidlr --> sider
-
-:Student: --> Emne
 
 note top of DLR 
     Dersom vi ender opp med Kaltura

@@ -24,12 +24,21 @@ const Sidebar = () => (
     )}
     <header>Bruksmønster</header>
     <ul>
-      <li><Link to="/lecturer">Foreleser: MAM-DLR-LMS</Link></li>
-      <li><Link to="/kaltura-whiteboard">Kaltura whiteboard sesjon</Link></li> 
+      <li><Link to="/academic">Vitenskapelig ansatte: MAM-DLR</Link></li>
+      <li><Link to="/pro">Proffe: MAM-DLR</Link></li>
+    </ul>
+    <header>Test scenario</header>
+    <ul>
+      <li><Link to="/pro-test-cases">Proffbruker-scenario</Link></li>
+      <li><Link to="/academic-test-cases">Vitenskapelig ansatte</Link></li>
     </ul>
     <header>Komponenter</header>
     <ul>
       <li><Link to="/kaltura">Kaltura</Link></li>
+    </ul>
+    <header>Diverse</header>
+    <ul>
+    <li><Link to="/kaltura-whiteboard">Kaltura whiteboard sesjon</Link></li> 
     </ul>
   </SidebarContainer>
 )
