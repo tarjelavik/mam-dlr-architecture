@@ -27,7 +27,7 @@ cloud DLR {
 rectangle "Mitt UiB" as LMS {
 }
 
-rectangle Eksamen {
+rectangle Inspera {
 }
 
 (MAM-portal) as portal
@@ -45,15 +45,16 @@ kapi --> (Kunnskapskanalen)
 kapi --> (Prosjekt)
 
 kstorage --> (UiB ingester)
+dstorage --> (UiB ingester)
 (UiB ingester) --> (Billy)
 
 DLR --> LMS : LTI
 DLR --> (Datacite DOI)
 (Datacite DOI) --> (NVI rapportering)
-DLR --> Eksamen : Video i oppgave
-Eksamen --> (B-Repo)
-:Student: --> Eksamen
-Eksamen --> LMS
+DLR --> Inspera : Video i oppgave
+Inspera --> (B-Repo)
+:Student: --> Inspera
+Inspera --> LMS
 @enduml
 ```
 
