@@ -20,3 +20,8 @@ title: "Vitenskapelige ansatte: scenario"
 ```plantuml
 
 ```
+
+## Lage kanal for forsningsprosjekt og publisere ressurser
+
+```plantuml
+```
