@@ -8,15 +8,20 @@ title: "Vitenskapelig ansatte: MAM-DLR-LMS"
 
 title Kaltura -> DLR: Lecturer
 
+rectangle Desktop {
+    (Kaltura capture)
+}
+
 rectangle "Mitt UiB" as mittuib {
     rectangle Kaltura {
-        (Last opp)
+        (Last opp) as kupload
         (Express capture) 
         (Legg til metadata) as metadata
         (Publiser til kanal) as channel
     }
 
     rectangle DLR {
+        (Last opp) as dlrupload
         (Tilgangskontroll) as access
         (Lisensiering) as license
         (Publiser) as publish
@@ -32,11 +37,13 @@ rectangle "Mitt UiB" as mittuib {
 :Vitenskapelig: as Lecturer
 :Student: as Student
 
-Lecturer --> (Upload)
+Lecturer --> kupload
+Lecturer ..> dlrupload
+dlrupload --> wf
 Lecturer --> (Kaltura capture)
 Lecturer --> (Express capture) 
-(Kaltura capture) --> (Upload)
-(Upload) --> metadata
+(Kaltura capture) --> (Last opp)
+(Last opp) --> metadata
 (Express capture) --> metadata
 metadata --> channel : "[Ressurs har obligatorisk \lmetadata for DLR?]"
 
