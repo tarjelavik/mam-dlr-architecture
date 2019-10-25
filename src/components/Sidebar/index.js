@@ -38,7 +38,9 @@ const Sidebar = () => (
     </ul>
     <header>Diverse</header>
     <ul>
-    <li><Link to="/kaltura-whiteboard">Kaltura whiteboard sesjon</Link></li> 
+      <li><Link to="/kaltura-whiteboard">Kaltura whiteboard sesjon</Link></li> 
+      <li><Link to="/embed-test">Test av embed-funksjonalitet</Link></li>
+      <li><a href="https://uib-video.netlify.com/">UiB Video</a></li>
     </ul>
   </SidebarContainer>
 )
