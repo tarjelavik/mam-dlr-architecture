@@ -8,12 +8,18 @@ title: "Vitenskapelig ansatte: MAM-DLR-LMS"
 
 title Kaltura -> DLR: Pro
 
-rectangle Goliat {
+rectangle "[[https://www.uib.no PRO-arbeidsflyt]]" as pro-wf {
+    
+    (FCP)
+    (Premier)
 
-}
+    rectangle Goliat {
 
-rectangle Billy {
+    }
 
+    rectangle Billy {
+
+    }
 }
 
 rectangle Kaltura {
