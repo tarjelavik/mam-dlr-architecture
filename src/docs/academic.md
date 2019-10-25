@@ -10,26 +10,27 @@ title Kaltura -> DLR: Lecturer
 
 rectangle "Mitt UiB" as mittuib {
     rectangle Kaltura {
-        (Upload)
+        (Last opp)
         (Express capture) 
-        (Add metadata) as metadata
-        (Publish to channel) as channel
+        (Legg til metadata) as metadata
+        (Publiser til kanal) as channel
     }
 
     rectangle DLR {
         (Tilgangskontroll) as access
         (Lisensiering) as license
-        (Embed) as embed
+        (Publiser) as publish
         (Workflow?) as wf
     }
     rectangle Emne {
+        (Aktivere DLR i emne) as activate
         (Sider) as sider
-        (DLR) as ltidlr
+        (Embed DLR innhold) as ltidlr
     }
 }
 
-:Lecturer: 
-:Student: 
+:Vitenskapelig: as Lecturer
+:Student: as Student
 
 Lecturer --> (Upload)
 Lecturer --> (Kaltura capture)
@@ -37,13 +38,15 @@ Lecturer --> (Express capture)
 (Kaltura capture) --> (Upload)
 (Upload) --> metadata
 (Express capture) --> metadata
-metadata --> channel : "[Resource has required\lmetadata for DLR?]"
+metadata --> channel : "[Ressurs har obligatorisk \lmetadata for DLR?]"
 
-channel --> (DLR ingester) : "[Published to watched channel or category]"
-channel --> (Kunnskapskanalen CMS/SSG) : "[Published to Kunnskapskanelen channel]"
+channel --> (DLR ingester) : "[Publisert til overvåket kanal eller kategori?]"
+channel --> (Kunnskapskanalen CMS/SSG) : "[Publisert til Kunnskapskanelen]"
 (DLR ingester) --> wf
-(DLR ingester) ..> embed : "Kan ingester la metadata fra MAM\lstyre lisensiering og publisering?"
-embed --> ltidlr
+(DLR ingester) ..> publish : "Kan ingester la metadata fra MAM\lstyre lisensiering og publisering?"
+publish --> ltidlr
+
+Lecturer --> activate
 
 note top of ltidlr
     MÅ bruke DLR til å
@@ -53,11 +56,11 @@ end note
 
 wf --> access
 access --> license
-license --> embed
+license --> publish
 
 ltidlr --> sider
 
-:Student: --> Emne
+Student --> sider
 
 note top of DLR 
     Dersom vi ender opp med Kaltura
