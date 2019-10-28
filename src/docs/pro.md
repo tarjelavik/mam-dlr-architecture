@@ -8,18 +8,8 @@ title: "Vitenskapelig ansatte: MAM-DLR-LMS"
 
 title Kaltura -> DLR: Pro
 
-rectangle "[[https://www.uib.no PRO-arbeidsflyt]]" as pro-wf {
+rectangle "[[pro-workflow PRO-arbeidsflyt]]" as prowf {
     
-    (FCP)
-    (Premier)
-
-    rectangle Goliat {
-
-    }
-
-    rectangle Billy {
-
-    }
 }
 
 rectangle Kaltura {
@@ -44,14 +34,9 @@ rectangle "Mitt UiB" as mittuib {
 Bestiller --> (Del med bestiller)
 Bestiller ..> wf
 
-Pro --> (FCP)
-(FCP) <-> Goliat
-Pro --> (Premier)
-(Premier) <-> Goliat
+Pro <-> prowf
 
-Goliat --> Billy
-
-Pro --> (Last opp)
+Pro --> (Last opp) : "[Ferdig master]"
 (Last opp) --> metadata
 metadata ..> (Del med bestiller)
 (Del med bestiller) ..> channel
