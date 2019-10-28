@@ -24,9 +24,10 @@ const Sidebar = () => (
     )}
     <header>Bruksmønster</header>
     <ul>
-      <li><Link to="/academic">Vitenskapelig ansatte: MAM-DLR</Link></li>
-      <li><Link to="/pro">Proffe: MAM-DLR</Link></li>
-      <li><Link to="/pro-workflow">Pro-workflow</Link></li>
+      <li><Link to="/academic">Vitenskapelig: MAM-DLR</Link></li>
+      <li><Link to="/pro">Pro: MAM-DLR</Link></li>
+      <li><Link to="/pro-workflow">Pro: workflow</Link></li>
+      <li><Link to="/kk-workflow">KK: workflow</Link></li>
     </ul>
     <header>Test scenario</header>
     <ul>

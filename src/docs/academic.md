@@ -1,6 +1,6 @@
 ---
 path: "/academic"
-title: "Vitenskapelig ansatte: MAM-DLR-LMS"
+title: "Vitenskapelig: MAM-DLR-LMS"
 ---
 
 ```plantuml 

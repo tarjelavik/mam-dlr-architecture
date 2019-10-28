@@ -1,6 +1,6 @@
 ---
 path: "/pro"
-title: "Vitenskapelig ansatte: MAM-DLR-LMS"
+title: "Pro: MAM-DLR-LMS"
 ---
 
 ```plantuml 
@@ -8,7 +8,7 @@ title: "Vitenskapelig ansatte: MAM-DLR-LMS"
 
 title Kaltura -> DLR: Pro
 
-rectangle "[[pro-workflow PRO-arbeidsflyt]]" as prowf {
+rectangle "[[/pro-workflow PRO-arbeidsflyt]]" as prowf {
     
 }
 

@@ -1,6 +1,6 @@
 ---
 path: "/pro-workflow"
-title: "Pro-workflow"
+title: "Pro: workflow"
 ---
 
 ```plantuml 
@@ -13,7 +13,7 @@ rectangle Desktop {
     (Proxy)
 }
 
-rectangle "PRO-arbeidsflyt" as pro-wf {
+rectangle "PRO-arbeidsflyt" as prowf {
     rectangle Goliat {
         (Original)
         (Rename)
@@ -24,7 +24,7 @@ rectangle "PRO-arbeidsflyt" as pro-wf {
     }
 }
 
-rectangle "[[pro Kaltura]]" {
+rectangle "[[/pro Kaltura]]" {
     (Last opp)
     (Redigere metadata) as metadata
     (Del med bestiller)
