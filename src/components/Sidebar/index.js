@@ -24,8 +24,10 @@ const Sidebar = () => (
     )}
     <header>Bruksmønster</header>
     <ul>
-      <li><Link to="/academic">Vitenskapelig ansatte: MAM-DLR</Link></li>
-      <li><Link to="/pro">Proffe: MAM-DLR</Link></li>
+      <li><Link to="/academic">Vitenskapelig: MAM-DLR</Link></li>
+      <li><Link to="/pro">Pro: MAM-DLR</Link></li>
+      <li><Link to="/pro-workflow">Pro: workflow</Link></li>
+      <li><Link to="/kk-workflow">KK: workflow</Link></li>
     </ul>
     <header>Test scenario</header>
     <ul>
@@ -38,7 +40,11 @@ const Sidebar = () => (
     </ul>
     <header>Diverse</header>
     <ul>
-    <li><Link to="/kaltura-whiteboard">Kaltura whiteboard sesjon</Link></li> 
+      <li><Link to="/kaltura-whiteboard">Kaltura whiteboard sesjon</Link></li> 
+      <li><Link to="/embed-test">Test av embed-funksjonalitet</Link></li>
+      <li><a href="https://uib-video.netlify.com/">UiB Video</a></li>
+      <li><Link to="/mam-alternatives">MAM alternativ</Link></li>
+      <li><Link to="/metadata">Metadata</Link></li>
     </ul>
   </SidebarContainer>
 )

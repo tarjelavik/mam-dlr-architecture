@@ -1,6 +1,6 @@
 ---
 path: "/pro"
-title: "Vitenskapelig ansatte: MAM-DLR-LMS"
+title: "Pro: MAM-DLR-LMS"
 ---
 
 ```plantuml 
@@ -8,37 +8,38 @@ title: "Vitenskapelig ansatte: MAM-DLR-LMS"
 
 title Kaltura -> DLR: Pro
 
-rectangle Goliat {
-
-}
-
-rectangle Billy {
-
+rectangle "[[/pro-workflow PRO-arbeidsflyt]]" as prowf {
+    
 }
 
 rectangle Kaltura {
-    (Upload)
-    (Add metadata) as metadata
-    (Publish to channel) as channel
+    (Last opp)
+    (Redigere metadata) as metadata
+    (Del med bestiller)
+    (Publiser til kanal) as channel
 }
 
 rectangle "Mitt UiB" as mittuib {
     rectangle DLR {
+        (Min arbeidsflyt?) as wf
         (Tilgangskontroll) as access
         (Lisensiering) as license
-        (Embed) as embed
-        (Workflow?) as wf
+        (Ferdigstilt) as embed
     }
 }
 
-:Pro: 
+:Pro:
+:Bestiller:
 
-Pro --> (FCP / Premier)
-(FCP / Premier) <-> Goliat
-Goliat --> Billy
+Bestiller --> (Del med bestiller)
+Bestiller ..> wf
 
-Pro --> (Upload)
-(Upload) --> metadata
+Pro <-> prowf
+
+Pro --> (Last opp) : "[Ferdig master]"
+(Last opp) --> metadata
+metadata ..> (Del med bestiller)
+(Del med bestiller) ..> channel
 metadata --> channel : "[Resource has required\lmetadata for DLR?]"
 
 channel --> (DLR ingester) : "[Published to watched channel or category]"
