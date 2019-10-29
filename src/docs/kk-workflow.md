@@ -22,10 +22,10 @@ rectangle Kunnskapskanalen as kk {
     (Hent data) as source
     (Redaksjonell arbeidsflyt)
     (/api)
-    (web)
 }
 
 :Pro:
+:Bruker:
 
 Pro --> prowf
 
@@ -35,8 +35,8 @@ metadata --> channel
 
 channel --> source : "[Publisert til Kunnskapskanelen]"
 channel --> (uib.no) : "[Publisert til uib.no-kanal]"
-channel --> (Youtube) : "[Distribuert]"
-channel --> (Vimeo) : "[Distribuert]"
+channel --> (Youtube) : "[Distribuert til]"
+channel --> (Vimeo) : "[Distribuert til]"
 
 (UiO data) --> source
 (NTNU data) --> source
@@ -46,9 +46,17 @@ channel --> (Vimeo) : "[Distribuert]"
 source --> (Redaksjonell arbeidsflyt)
 (Redaksjonell arbeidsflyt) --> (/api)
 
-(/api) --> web
+(/api) --> (web)
 (/api) --> (KK AppleTV)
 (/api) --> (KK Native app)
+
+Bruker --> (web)
+Bruker --> (KK AppleTV)
+Bruker --> (KK Native app)
+
+note right of (Redaksjonell arbeidsflyt)
+    Godkjenn eller legg til kategorier
+end note
 
 @enduml
 ```
