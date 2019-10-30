@@ -5,6 +5,7 @@ title: "Pro: workflow"
 
 Frame.io sitt dokument på arbeidsflyt er interessant lesning: https://workflow.frame.io/guide.
 
+Dette er en amatørs første forsøk på å forstå en pro workflow under produksjon. Ikke men som noe normativt, men et forsøk på å se formidlingen av råopptak til de som måtte ønske å se de for forskningsformål, gjenbruk i nye produksjoner o.l.
 
 ```plantuml 
 @startuml
@@ -65,7 +66,7 @@ note bottom of Rename
     - 20190812-villskap-olsen-intervju-01-lv-001
 end note
 
-note right of Bestiller 
+note top of Bestiller 
     Alternative måter å dele AV-filer
     kan være frame.io, Teams og MS Video
 end note

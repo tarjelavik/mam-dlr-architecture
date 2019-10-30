@@ -3,15 +3,50 @@ path: "/metadata"
 title: "Metadata"
 ---
 
+<iframe src="//slides.com/tarjelavik/metadata-llor-kk/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 ## Krav
 
 * Kompatibel med [Datacite skjemaet](https://schema.datacite.org/) ([video-xml](https://schema.datacite.org/meta/kernel-4.3/example/datacite-example-video-v4.xml), [komplett-xml](https://schema.datacite.org/meta/kernel-4.3/example/datacite-example-full-v4.xml))
-* sdfsdf
+  * Noe DLR og UNIT ordner?
+* Være mulig å implementere i MAM
+  * Kaltura kan tilpasses, men har noe begrenset funksjonalitet
+* Kompatibel med Kunnskapskanalens metadata-skjema
+
+
+## Sammenligning
+
+- Hentet fra [dette regnearket](https://universityofbergen.sharepoint.com/:x:/r/sites/TEAM_LagringogLOR_Project/_layouts/15/Doc.aspx?sourcedoc=%7BBA101562-CDFE-4D83-B580-BEA60204F5A9%7D&file=Sammenligning%20av%20registreringsfelt.xlsx&action=default&mobileredirect=true)
+
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #CCC; 
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+	}
+	.tableizer-table th {
+    font-weight: bold;
+    padding: 4px;
+    margin: 3px;
+    border: 1px solid #CCC;
+	}
+</style>
+<table class="tableizer-table"> <thead><tr class="tableizer-firstrow"><th>KK</th><th>HD-Tivoli</th><th>Mastertape</th><th>Youtube</th><th>Vimeo</th><th>Standardisert</th><th>Kommentar</th></tr></thead><tbody> <tr><td>&nbsp;</td><td>Ref. #</td><td>Tape nr.</td><td>Ref. #</td><td>Ref. #</td><td>dct.identifier</td><td>&nbsp;</td></tr> <tr><td>Tittel</td><td>Programtittel</td><td>Programtittel</td><td>Tittel </td><td>Tittel </td><td>dct.title</td><td>&nbsp;</td></tr> <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr> <tr><td>Publisert dato</td><td>&nbsp;</td><td>&nbsp;</td><td>Opplastningsdato</td><td>Opplastningsdato</td><td>dct:available</td><td>&nbsp;</td></tr> <tr><td>Dato</td><td>Prod. dato</td><td>Dato</td><td>&nbsp;</td><td>&nbsp;</td><td>dct:created</td><td>&nbsp;</td></tr> <tr><td>&nbsp;</td><td>Arkivert</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dato for når prosjektet ble lagret i Tivoli, viktig for gjenfinning</td></tr> <tr><td>&nbsp;</td><td>&nbsp;</td><td>Merknader</td><td>&nbsp;</td><td>&nbsp;</td><td>ebucore:comment</td><td>Intern?</td></tr> <tr><td>&nbsp;</td><td>&nbsp;</td><td>merknad</td><td>&nbsp;</td><td>&nbsp;</td><td>ebucore:comment</td><td>Intern?</td></tr> <tr><td>Innhold</td><td>Innhold</td><td>Innhold</td><td>&nbsp;</td><td>&nbsp;</td><td>ebucore:abstract / dct:description</td><td>&nbsp;</td></tr> <tr><td>Personer</td><td>Personer</td><td>Personer</td><td>&nbsp;</td><td>&nbsp;</td><td>???</td><td>Personer som er med i video</td></tr> <tr><td>&nbsp;</td><td>Produsent/Regi</td><td>Produsent</td><td>&nbsp;</td><td>&nbsp;</td><td>dct:creator</td><td>&nbsp;</td></tr> <tr><td>&nbsp;</td><td>Lyd</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>ex:soundBy</td><td>&nbsp;</td></tr> <tr><td>&nbsp;</td><td>Foto</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>ex:videoBy</td><td>&nbsp;</td></tr> <tr><td>Bestiller</td><td>Oppdragsgiver</td><td>Oppdragsgiver</td><td>&nbsp;</td><td>&nbsp;</td><td>ex:commissionedBy</td><td>&nbsp;</td></tr> <tr><td>Fakultet</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>ex:faculty</td><td>&nbsp;</td></tr> <tr><td>Organisasjon</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>ex:organisation</td><td>&nbsp;</td></tr> <tr><td>Stab</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Hva menes med denne? De som har jobbet med objektet? I hvilke roller?</td></tr> <tr><td>Sted</td><td>Opptaksted</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>dc:spatial</td><td>&nbsp;</td></tr> <tr><td>Fagområde</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Tags</td><td>dc:subject</td><td>&nbsp;</td></tr> <tr><td>&nbsp;</td><td>Emne</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>???</td><td>Inneholder ofte bare tittelen</td></tr> <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Album</td><td>dct:isPartOf</td><td>&nbsp;</td></tr> <tr><td>Størrelse/Lengde</td><td>Lengde</td><td>Tid</td><td>Lengde</td><td>Lengde</td><td>ebucore:duration</td><td>Her er tid og filstørrelse blandet hos KK</td></tr> <tr><td>Format</td><td>Format</td><td>Format</td><td>&nbsp;</td><td>&nbsp;</td><td>dc:format</td><td>Tekststreng, men er nok mulig å finne en autoritativ liste over format</td></tr> <tr><td>&nbsp;</td><td>&nbsp;</td><td>Digitalisert</td><td>&nbsp;</td><td>&nbsp;</td><td>ex:isDigitised</td><td>Bør være boolsk, men inneholder, "X Frode", "Ikke spillbar", "-" og "C"</td></tr> <tr><td>&nbsp;</td><td>&nbsp;</td><td>Generasjon</td><td>&nbsp;</td><td>&nbsp;</td><td>ebucore:hasGeneration</td><td>&nbsp;</td></tr> <tr><td>Fil/Tape</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>ebucore:filename</td><td>Filnavn?</td></tr> <tr><td>Publisert (hyperlink)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>edm:isShownAt</td><td>&nbsp;</td></tr> <tr><td>&nbsp;</td><td>Rettigheter</td><td>Rettigheter</td><td>&nbsp;</td><td>&nbsp;</td><td>dc:rights</td><td>&nbsp;</td></tr> <tr><td>Tilgang</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>ex:accessRights</td><td>&nbsp;</td></tr> <tr><td>Vedlegg</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Samtykke og rettigheter som eksempler i dokumentasjon</td></tr> <tr><td>&nbsp;</td><td>Arikvert (Billy)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Tom</td></tr> <tr><td>&nbsp;</td><td>&nbsp;</td><td>Råstoff?</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Tom</td></tr> </tbody></table>
 
 ## Datacite
 
 ```xml
-<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+<resource 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns="http://datacite.org/schema/kernel-4" 
+  xsi:schemaLocation="http://datacite.org/schema/kernel-4 
+  http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
   <identifier identifierType="DOI">10.5072/1153992</identifier>
   <creators>
     <creator>
@@ -36,7 +71,11 @@ title: "Metadata"
   </formats>
   <descriptions>
     <description xml:lang="en" descriptionType="Abstract">
-    This hour-long video features John Halter as the narrator. Mr. Halter is best known as a journalist rather than a TV star, and here he plays that role as he does an "expose" type of walkthrough a new home. The home has been advertised as a house with the very latest in state-of-the art energy efficiency, especially solar. Mr. Halter puts the home through an investigation and determines that it can, indeed, live up to its claims.
+      This hour-long video features John Halter as the narrator. Mr. Halter is best known as a 
+      journalist rather than a TV star, and here he plays that role as he does an "expose" type 
+      of walkthrough a new home. The home has been advertised as a house with the very latest in 
+      state-of-the art energy efficiency, especially solar. Mr. Halter puts the home through an 
+      investigation and determines that it can, indeed, live up to its claims.
     </description>
   </descriptions>
 </resource>

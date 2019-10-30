@@ -10,7 +10,6 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
@@ -30,10 +29,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 
 /* After resetting we can start to add our own styles */
 
@@ -45,4 +41,13 @@ body {
 	background-color: #FFF;
 	display: flex;
 	flex-direction: column;
+}
+
+table {
+	width:100%;
+	border:1px solid #ccc;
+}
+
+th {
+	text-align: left;
 }
