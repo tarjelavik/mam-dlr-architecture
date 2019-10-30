@@ -43,10 +43,6 @@ class IndexPage extends Component {
             About us
           </Card>
         </CardContainer> */}
-
-        <ul>
-          <li>Må vi ta hensyn til proprietære bokser for streaming til MAM?</li>
-        </ul>
       </div>
     )
   }
