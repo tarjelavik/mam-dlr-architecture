@@ -6,7 +6,7 @@ title: "Vitenskapelig: MAM-DLR-LMS"
 ```plantuml 
 @startuml
 
-title Kaltura -> DLR: Lecturer
+title Vitenskapelig: MAM-DLR
 
 rectangle Desktop {
     (Kaltura capture)

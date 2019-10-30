@@ -3,10 +3,13 @@ path: "/pro-workflow"
 title: "Pro: workflow"
 ---
 
+Frame.io sitt dokument på arbeidsflyt er interessant lesning: https://workflow.frame.io/guide.
+
+
 ```plantuml 
 @startuml
 
-title Pro-workflow
+title Pro: workflow
 
 rectangle Desktop {
     (FCP/Premiere)
@@ -62,5 +65,9 @@ note bottom of Rename
     - 20190812-villskap-olsen-intervju-01-lv-001
 end note
 
+note right of Bestiller 
+    Alternative måter å dele AV-filer
+    kan være frame.io, Teams og MS Video
+end note
 @enduml
 ```

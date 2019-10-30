@@ -38,10 +38,10 @@ channel --> (uib.no) : "[Publisert til uib.no-kanal]"
 channel --> (Youtube) : "[Distribuert til]"
 channel --> (Vimeo) : "[Distribuert til]"
 
-(UiO data) --> source
-(NTNU data) --> source
-(HVL data) --> source
-(UiT data) --> source
+(UiO metadata \log stream) --> source
+(NTNU metadata \log stream) --> source
+(HVL metadata \log stream) --> source
+(UiT metadata \log stream) --> source
 
 source --> (Redaksjonell arbeidsflyt)
 (Redaksjonell arbeidsflyt) --> (/api)
@@ -55,7 +55,8 @@ Bruker --> (KK AppleTV)
 Bruker --> (KK Native app)
 
 note right of (Redaksjonell arbeidsflyt)
-    Godkjenn eller legg til kategorier
+    Godkjenn eller avvis
+    - legg til kategorier
 end note
 
 @enduml

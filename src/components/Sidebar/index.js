@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import SearchBox from './SearchBox'
 
 const SidebarContainer = styled.div`
-  width:  250px;
+  width:  350px;
 
   header {
     font-weight: bold;
