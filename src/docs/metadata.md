@@ -5,6 +5,8 @@ title: "Metadata"
 
 <iframe src="//slides.com/tarjelavik/metadata-llor-kk/embed" width="800" height="620" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+Presentasjon om metadata, WIP...
+
 ## Krav
 
 * Kompatibel med [Datacite skjemaet](https://schema.datacite.org/) ([video-xml](https://schema.datacite.org/meta/kernel-4.3/example/datacite-example-video-v4.xml), [komplett-xml](https://schema.datacite.org/meta/kernel-4.3/example/datacite-example-full-v4.xml))
