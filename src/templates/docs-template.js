@@ -22,7 +22,7 @@ class Template extends Component {
             <h1>{page.frontmatter.title}</h1>
             <span>{page.frontmatter.baseline}</span>
           </header>
-          <div dangerouslySetInnerHTML={{ __html: page.html }} />
+          <div className="content" dangerouslySetInnerHTML={{ __html: page.html }} />
         </div>
       </div>
     );

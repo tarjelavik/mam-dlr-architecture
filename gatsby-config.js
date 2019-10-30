@@ -11,29 +11,6 @@ module.exports = {
           {
             resolve: `gatsby-remark-plantuml`,
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              linkImagesToOriginal: false
-            },
-          }
-        ]
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/docs`,
-        name: "docs",
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -95,7 +72,22 @@ module.exports = {
               },
             },
           },
-        ],
+          'gatsby-remark-copy-linked-files',
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              linkImagesToOriginal: false
+            },
+          }
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/docs`,
+        name: "docs",
       },
     },
   ],

@@ -51,3 +51,7 @@ table {
 th {
 	text-align: left;
 }
+
+.page {
+	max-width: 700px;
+}
