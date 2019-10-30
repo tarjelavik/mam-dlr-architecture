@@ -32,7 +32,7 @@ class IndexPage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="page">
         <h1>Lagring og LOR</h1>
         <p>Mens vi venter på Visio, bruker vi UML og gjør arkitektur arbeidet åpent. For mer informasjon om prosjektet, ligger det noe <a href="https://www.uib.no/l%C3%A6ringslab/122105/satsningsomr%C3%A5der-i-uib-l%C3%A6ringslab" alt="Presentasjon av prosjektene ved UiB Læringslaben">på Læringslabens sider</a>.</p>
         {/* <CardContainer>
