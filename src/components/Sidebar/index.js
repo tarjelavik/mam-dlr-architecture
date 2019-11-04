@@ -24,6 +24,7 @@ const Sidebar = () => (
     )}
     <header>Bruksmønster</header>
     <ul>
+      <li><Link to="/canvas-dlr">Canvas-DLR integrasjon</Link></li>
       <li><Link to="/academic">Vitenskapelig: MAM-DLR</Link></li>
       <li><Link to="/pro">Pro: MAM-DLR</Link></li>
       <li><Link to="/pro-workflow">Pro: workflow</Link></li>
