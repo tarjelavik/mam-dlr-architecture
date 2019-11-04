@@ -3,7 +3,9 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const HeaderContainer = styled.div`
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ccc;
   h1 {
     font-size: 22px;
     a {

@@ -8,7 +8,7 @@ title: "Pro: MAM-DLR-LMS"
 
 title Kaltura -> DLR: Pro
 
-rectangle "[[/pro-workflow PRO-arbeidsflyt]]" as prowf {
+rectangle "[[/pro-workflow PRO: MAM-DLR]]" as prowf {
     
 }
 
