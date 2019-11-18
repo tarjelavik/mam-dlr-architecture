@@ -52,6 +52,7 @@ channel --> (Kunnskapskanalen CMS/SSG) : "[Publisert til Kunnskapskanelen]"
 (DLR ingester) --> wf
 (DLR ingester) ..> publish : "Kan ingester la metadata fra MAM\lstyre lisensiering og publisering?"
 publish --> ltidlr
+publish --> (BioCEED...)
 
 Lecturer --> activate
 
