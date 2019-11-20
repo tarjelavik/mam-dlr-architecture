@@ -17,6 +17,7 @@ Presentasjon om metadata, WIP...
 * Bør kunne benytte eksterne autoritetslister
   * Kategori-, person-, stedsregister...
 
+Metadata-standarder for AV strekker seg fra enkle regneark (se nedenfor) til [IPTC](https://iptc.org/std/videometadatahub/recommendation/IPTC-VideoMetadataHub-props-Rec_1.2.html) og [EBU Core](https://tech.ebu.ch/MetadataEbuCore). Kompleksiteten i EBU Core er nødvendig for et mediehus eller rikskringkaster, men alt for stor for UiB eller KK. IPTC er nærmere en balanse mellom kompleksitet, uttrykksmulighet og struktur.
 
 ## Sammenligning
 
@@ -24,7 +25,7 @@ Tabellen nedenfor er hentet fra [dette regnearket](https://universityofbergen.sh
 
 Netflixs skjema er laget for å håndtere metadata på flere språk for distribusjon i flere land, samt håndtering av serier og så enkelt som mulig kunne lage brukergrensesnitt. Det er ikke mange serier registrert i UiBs regneark, men det er nok til å inkludere dette i metadataskjemaet.
 
-Registreringen av personer bør også håndteres på en bedre måte. Det bør enten være kolonner for de rollene man ønsker å registrere (skaper, regi, film, lyd, skuespiller) eller så bør det være én kolonne der person og rolle kombineres (f.eks.: "Tarje Lavik, regissør||Frode Ims, foto").
+Registreringen av personer bør håndteres på en bedre måte. Enten ved å lage kolonner for de rollene man ønsker å registrere (skaper, regi, film, lyd, skuespiller) eller lage én kolonne der person og rolle kombineres (f.eks.: "Tarje Lavik, regissør||Frode Ims, foto").
 
 <style type="text/css">
 	table.tableizer-table {
@@ -231,3 +232,9 @@ Registreringen av personer bør også håndteres på en bedre måte. Det bør en
   }
 ]
 ```
+
+## MODS film
+
+Dersom vi skal avlevere direkte til NB vil de nok foretrekke MODS XML. Dog, de vil helst høste fra UNIT.
+
+[Eksempel MODS film](https://lccn.loc.gov/80700998/mods)

@@ -3,6 +3,126 @@ path: "/academic"
 title: "Vitenskapelig: MAM-DLR-LMS"
 ---
 
+## Dele video lukket i emne eller LMS uten bruk av DLR
+
+Integrasjon av MAM i LMS kan benyttes til å dele video lukket i MAM og i emner. Kaltura kan settes opp slik at LMS lager egne samlinger basert på emnene som holdes. Forelesere og studenter kan dele video lukket i det emnet. Dette kan være nyttig for å gi studenter video-tilbakemeldinger.
+
+Disse videoene vil kunne regnes som flyktige og bli slettet automatisk, med mindre de har blitt publisert til DLR og/eller en kanal.
+
+-> Spørsmål: Video som har blitt tilgjengeliggjort i emnegalleriet og publisert, vil de kunne bli slettet selv om de skal tas vare på?
+
+```plantuml 
+@startuml
+
+title Vitenskapelig: MAM-DLR
+
+|MAM|
+start
+    fork
+        :Last opp;
+    fork again
+        :Express capture;
+    end fork
+    :Rediger video;
+    :Legg til metadata 
+    - tittel
+    - beskrivelse
+    - tags;
+    :Tilgjengelig i "My media"  ;
+    if (Dele?) then (Embed i tekst)
+        |LMS Emne| 
+        :Embed i 
+        - Discussions
+        - Announcements
+        - Course Pages;
+        stop
+    else (Til alle på emnet)
+        |LMS Emne|
+        :Tilgjengelig i Media galleri;
+        stop
+
+@enduml
+```
+
+## Publisere video i DLR
+
+## Alternativ der DLR overvåker en MAM-kanal
+
+```plantuml 
+@startuml
+
+title Vitenskapelig: MAM-DLR
+
+|MAM|
+start
+    :Tilgjengelig i "My media"  ;
+    if (Dele med UiB/eksternt?) then (No)
+        |MAM|
+        stop
+    else (Yes)
+        |MAM|
+        :Publiser til DLR-kanal;
+|DLR|
+    :Rediger metadata;
+    :Velg lisens;
+    :Publiser med DOI;
+|LMS Emne 1|
+    :Tilgjengelig i DLR portal og LTI;
+    :Embed i 
+    - Discussions
+    - Announcements
+    - Course Pages;
+    stop
+@enduml
+```
+
+### Alternativ der MAM deler til hele LMS
+
+```plantuml 
+@startuml
+
+title Vitenskapelig: MAM-DLR
+
+|MAM|
+start
+    fork
+        :Last opp;
+    fork again
+        :Express capture;
+    end fork
+    :Rediger video;
+    :Legg til metadata 
+    - tittel
+    - beskrivelse
+    - tags;
+    :Tilgjengelig i "My media"  ;
+    if (Publisere til hele LMS?) then (Yes)
+        |LMS|
+        :Tilgjengelig i delt bibliotek;
+        detach
+    else (No)
+        |MAM|
+        if (Publisere til emne?) then (Yes)
+            |LMS Emne|
+            :Tilgjengelig i Media galleri;
+            detach
+        else (No)
+            |MAM|
+            if (Embed?) then (Yes)
+                |LMS Emne|
+                :Embed i 
+                - Discussions
+                - Announcements
+                - Course Pages;
+                detach
+            else (no)
+                |MAM|
+                stop
+@enduml
+```
+
+## Brukstilfelle - Vitenskapelig: MAM-DLR
+
 ```plantuml 
 @startuml
 
@@ -10,6 +130,8 @@ title Vitenskapelig: MAM-DLR
 
 rectangle Desktop {
     (Kaltura capture)
+    (Legg til metadata) as metadataDesktop
+    (Last opp) as uploadDesktop
 }
 
 rectangle "Mitt UiB" as mittuib {
@@ -42,8 +164,10 @@ Lecturer ..> dlrupload
 dlrupload --> wf
 Lecturer --> (Kaltura capture)
 Lecturer --> (Express capture) 
-(Kaltura capture) --> (Last opp)
-(Last opp) --> metadata
+(Kaltura capture) --> metadataDesktop
+metadataDesktop --> uploadDesktop
+uploadDesktop --> Kaltura
+kupload --> metadata
 (Express capture) --> metadata
 metadata --> channel : "[Ressurs har obligatorisk \lmetadata for DLR?]"
 

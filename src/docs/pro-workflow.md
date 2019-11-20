@@ -13,14 +13,12 @@ Dette er en amatørs første forsøk på å forstå en pro workflow under produk
 title Pro: workflow
 
 rectangle Desktop {
-    (FCP/Premiere)
-    (Proxy)
+    (FCP/Premiere) as application
 }
 
 rectangle "PRO-arbeidsflyt" as prowf {
     rectangle Goliat {
-        (Original)
-        (Rename)
+        (Bibliotek/Prosjekt) as project
     }
 
     rectangle Billy {
@@ -38,14 +36,17 @@ rectangle "[[/pro Kaltura]]" {
 :Pro:
 :Bestiller:
 
+(Minnekort m.m.) as source
+
+Pro -- source
+source --> application
+
 Bestiller <-- (Del med bestiller)
 
-Pro --> Original : "Last opp AV"
-Original --> Rename
+Pro --> project : "Last opp AV"
 
-Pro --> (FCP/Premiere)
-Proxy <-- (FCP/Premiere) : "Redigering på proxy"
-(FCP/Premiere) <-> Original : "Transcode proxy"
+Pro --> application
+application <-> project : "SAN/DLC"
 
 Goliat --> Billy : Avlevering av prosjekt/bibliotek
 
@@ -60,7 +61,7 @@ channel --> (uib.no) : "[Publisert til uib.no-kanal]"
 channel --> (Youtube) : "[Distribuert]"
 channel --> (Vimeo) : "[Distribuert]"
 
-note bottom of Rename
+note right of source
     Følge fast filnavn-struktur? Lettere å knytte til MAM?
     - date-projektID-emne-opptak-kamera#-lyd-klipp#
     - 20190812-villskap-olsen-intervju-01-lv-001
