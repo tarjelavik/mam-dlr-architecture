@@ -62,6 +62,8 @@ start
     else (Yes)
         |MAM|
         :Publiser til DLR-kanal;
+|DLR ingester|
+:Import media;
 |DLR|
     :Rediger metadata;
     :Velg lisens;
