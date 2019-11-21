@@ -73,19 +73,3 @@ note top of Bestiller
 end note
 @enduml
 ```
-
-
-```plantuml 
-@startuml
-cloud "AWS \l(Billy)" as aws
-database "MAM \l(NORDUnet)" as mam
-
-database "Goliat" as goliat
-database "Billy" as billy
-
-
-mam --> aws
-goliat --> billy
-
-@enduml
-```
