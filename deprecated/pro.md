@@ -44,6 +44,7 @@ metadata --> channel : "[Resource has required\lmetadata for DLR?]"
 
 channel --> (DLR ingester) : "[Published to watched channel or category]"
 channel --> (Kunnskapskanalen CMS/SSG) : "[Published to Kunnskapskanelen channel]"
+embed --> (Kunnskapskanalen CMS/SSG) : "[Published to Kunnskapskanelen tag]"
 (DLR ingester) --> wf
 (DLR ingester) ..> embed : "Kan ingester la metadata fra MAM\lstyre lisensiering og publisering?"
 
