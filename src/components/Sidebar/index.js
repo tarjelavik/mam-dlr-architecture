@@ -22,6 +22,9 @@ const Sidebar = () => (
     {process.env.GATSBY_DOCSEARCH_API_KEY && process.env.GATSBY_DOCSEARCH_INDEX && (
       <SearchBox />
     )}
+    <ul>
+      <li><Link to="/infrastruktur">Infrastruktur</Link></li>
+    </ul>
     <header>Bruksmønster</header>
     <ul>
       <li><Link to="/canvas-dlr">Mitt UiB - DLR</Link></li>
@@ -46,6 +49,11 @@ const Sidebar = () => (
       <li><Link to="/mam-alternatives">MAM alternativ</Link></li>
       <li><Link to="/metadata">Metadata</Link></li>
     </ul>
+    <a href="https://uib.panopto.nordu.net/">Panopto</a>
+    <br/>
+    <a href="https://355.kaltura.nordu.net/">Kaltura</a> (<a href="https://355.kaltura.nordu.net/admin">Admin</a>)
+    <br/>
+    <a href="https://kmc.kaltura.nordu.net/">Kaltura Management Console</a>
   </SidebarContainer>
 )
 

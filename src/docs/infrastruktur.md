@@ -3,14 +3,18 @@ path: "/infrastruktur"
 title: "Arkitekturskisse"
 ---
 
-En overordnet skisse over hvor mediafiler blir lagret. 
+
+
+
+## Lagring av mediafiler
+
+Uavhengig av hvilket MAM vi velger vil lagringen av filene bli lagret hos Nordunet i Danmark. 
+
+Nedenfor er en overordnet skisse over hvor mediafiler blir lagret. 
 
 * MAM levert av NORDU.net har ingen kostnader knyttet til båndbredde.
 * NORDUnet kan fasilitere diskusjon på slettepolitikk.
   * Kaltura og Panopto har innstillinger for slettepolitikk. 
-
-
-## Lagring av mediafiler
 
 ```plantuml 
 @startuml
@@ -37,6 +41,19 @@ goliat --> billy
 
 @enduml
 ```
+## Testoppsett av MAM
+
+### Panopto
+
+* Version: 7.8.2.61340 (pr. 11. des. 2019)
+* https://uib.panopto.nordu.net/
+
+### Kaltura
+
+* Version: 5.5.2 (pr. 11. des. 2019)
+* Brukere: https://355.kaltura.nordu.net/
+  * Admin: https://355.kaltura.nordu.net/admin
+* UiB admin: https://kmc.kaltura.nordu.net/
 
 ## Integrasjoner med Teams, Canvas og Zoom
 
@@ -104,4 +121,20 @@ mamLti -down-> kLMSE
 ### Kaltura
 
 <div style="max-width:400px"><div style="position:relative;padding-bottom:71.25%"><iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2249861/sp/224986100/embedIframeJs/uiconf_id/38665202/partner_id/2249861?iframeembed=true&playerId=kaltura_player&entry_id=0_bcdkyv5k&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en_BE&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_xyhag8r8" width="400" height="285" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
+
+## Panopto Recorder og Kaltura Capture
+
+### Panopto Recorder
+
+#### PC
+
+Panopto Recorder (PRec) er en .exe-fil og må derfor installeres via IT for PC.
+
+* https://support.panopto.com/s/article/Silent-Install-for-Panopto-for-Windows
+
+#### Mac 
+
+Klientdriftede mac-er der eier har glemt install-passord, er det fint at PRec er tilgjengelig i Managed Software Center.
+
+* https://support.panopto.com/s/article/Install-Panopto-for-Mac
 
